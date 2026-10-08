@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Die Hausers // Noise Post-Punk</title>
+    <link class="stilovi" rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+    <div class="nav-kontejner">
+        <button id="btn-pocetna" class="cassette-btn active" onclick="switchTab('pocetna')">
+            <div class="cassette-label" id="lang-menu-onama">O NAMA</div>
+            <div class="reel-kontejner"><div class="reel"></div><div class="reel-razmak"></div><div class="reel"></div></div>
+        </button>
+        <button id="btn-koncerti" class="cassette-btn" onclick="switchTab('koncerti')">
+            <div class="cassette-label" id="lang-menu-koncerti">KONCERTI</div>
+            <div class="reel-kontejner"><div class="reel"></div><div class="reel-razmak"></div><div class="reel"></div></div>
+        </button>
+        <button id="btn-mediji" class="cassette-btn" onclick="switchTab('mediji')">
+            <div class="cassette-label" id="lang-menu-mediji">MEDIJI</div>
+            <div class="reel-kontejner"><div class="reel"></div><div class="reel-razmak"></div><div class="reel"></div></div>
+        </button>
+        <button id="btn-galerija" class="cassette-btn" onclick="switchTab('galerija')">
+            <div class="cassette-label" id="lang-menu-galerija">FOTO/VIDEO</div>
+            <div class="reel-kontejner"><div class="reel"></div><div class="reel-razmak"></div><div class="reel"></div></div>
+        </button>
+        <button id="btn-kontakt" class="cassette-btn" onclick="switchTab('kontakt')">
+            <div class="cassette-label" id="lang-menu-kontakt">KONTAKT</div>
+            <div class="reel-kontejner"><div class="reel"></div><div class="reel-razmak"></div><div class="reel"></div></div>
+        </button>
+        <button id="btn-admin" class="cassette-btn" onclick="switchTab('admin')">
+            <div class="cassette-label" id="lang-menu-admin" style="background: #ffcc00;">FAN CORNER</div>
+            <div class="reel-kontejner"><div class="reel"></div><div class="reel-razmak"></div><div class="reel"></div></div>
+        </button>
+
+                
+        <div style="display: grid; grid-template-columns: repeat(2, 24px); gap: 8px; margin-left: auto; padding-left: 15px; align-items: center;">
+            
+            
+            <div onclick="promijeniJezik('hr')" title="Hrvatski" style="width: 24px; height: 24px; display: grid; grid-template-columns: repeat(4, 1fr); cursor: pointer; border-radius: 50%; overflow: hidden; border: 1px solid rgba(0,0,0,0.3); box-shadow: inset -3px -3px 6px rgba(0,0,0,0.4), inset 3px 3px 6px rgba(255,255,255,0.4), 0 3px 6px rgba(0,0,0,0.5); box-sizing: border-box;">
+                <div style="background: #ff0000;"></div><div style="background: #ffffff;"></div><div style="background: #ff0000;"></div><div style="background: #ffffff;"></div>
+                <div style="background: #ffffff;"></div><div style="background: #ff0000;"></div><div style="background: #ffffff;"></div><div style="background: #ff0000;"></div>
+                <div style="background: #ff0000;"></div><div style="background: #ffffff;"></div><div style="background: #ff0000;"></div><div style="background: #ffffff;"></div>
+                <div style="background: #ffffff;"></div><div style="background: #ff0000;"></div><div style="background: #ffffff;"></div><div style="background: #ff0000;"></div>
+            </div>
+            
+            <div onclick="promijeniJezik('hu')" title="Magyar" style="width: 24px; height: 24px; background: linear-gradient(to bottom, #ff0000 33.3%, #ffffff 33.3%, #ffffff 66.6%, #436f4d 66.6%); cursor: pointer; border-radius: 50%; border: 1px solid rgba(0,0,0,0.3); box-shadow: inset -3px -3px 6px rgba(0,0,0,0.4), inset 3px 3px 6px rgba(255,255,255,0.4), 0 3px 6px rgba(0,0,0,0.5); box-sizing: border-box;"></div>
+            
+            <div onclick="promijeniJezik('en')" title="English" style="width: 24px; height: 24px; background: #00247d; position: relative; cursor: pointer; border-radius: 50%; overflow: hidden; border: 1px solid rgba(0,0,0,0.3); box-shadow: inset -3px -3px 6px rgba(0,0,0,0.4), inset 3px 3px 6px rgba(255,255,255,0.4), 0 3px 6px rgba(0,0,0,0.5); box-sizing: border-box;">
+                <div style="position: absolute; top: 9px; left: 0; width: 100%; height: 6px; background: #ffffff;"></div>
+                <div style="position: absolute; top: 0; left: 9px; width: 6px; height: 100%; background: #ffffff;"></div>
+                <div style="position: absolute; top: 11px; left: 0; width: 100%; height: 2px; background: #ff0000;"></div>
+                <div style="position: absolute; top: 0; left: 11px; width: 2px; height: 100%; background: #ff0000;"></div>
+            </div>
+            
+            <div onclick="promijeniJezik('de')" title="Deutsch" style="width: 24px; height: 24px; background: linear-gradient(to bottom, #000000 33.3%, #dd0000 33.3%, #dd0000 66.6%, #ffcc00 66.6%); cursor: pointer; border-radius: 50%; border: 1px solid rgba(0,0,0,0.3); box-shadow: inset -3px -3px 6px rgba(0,0,0,0.4), inset 3px 3px 6px rgba(255,255,255,0.4), 0 3px 6px rgba(0,0,0,0.5); box-sizing: border-box;"></div>
+        
+        </div>
+
+
+    </div>
+
+
+    <div class="glavni-sadrzaj">
+        
+        
+<audio id="pozadinska-muzika" src="./src/Ne smije se.wav" loop></audio>
+        <h1 class="naslov-benda">Die Hausers</h1>
+        <p class="podnaslov-benda" id="lang-podnaslov">Sve je prolazno...</p>
+
+
+       
+        <div id="pocetna" class="tab-content active">
+            <div class="okvir-slike">
+                <img src="./src/slika0.jpg" alt="Die Hausers" class="slika-benda">
+            </div>
+            <div class="review-box">
+    <span id="lang-rem-citat">"Album je strog kontrast apokalipsi, meditativna kretnja u budućnosti tona koji oštro i nezadrživo svijetlo lebdi i misli"</span>
+    <span class="review-author">- GORAN REM</span>
+</div>
+
+            <div class="bio-box">
+                <p class="bio-istaknuto">
+                    Sirovi zvuk podrumskih gitara, mračni industrijski ritmovi i post-punk melankolija iz istočne Hrvatske. Zvuk koji spaja energiju underground scene i beskompromisni noise rock.
+                </p>
+                <p class="bio-tekst">
+                    Kultni osječki noise rock bend iz 90-ih, Die Hausers, izbacuju ploču! Nakon preko dva desetljeća sporadičnih koncerata, ove legende koje su utjecale na many odlučuju se napokon ovjekovječiti što su uspjeli stvorili kroz godine na vinil izdanju pod imenom "Sibir". Album uključuje stare hitove kao što su „Takav sam kakav sam“, „Ljudi“, „Crvi“ i „To upamti“, napokon kvalitetno snimljene, ali s istim onim zakucanim intenzitetom na kojem su se od početka etablirali. Ploča izlazi van na PDV-u (PDV094) 19. lipnja, a koncertna promocija je u četvrtak, 25. lipnja, u sklopu prvog izdanja FRAN Festa u Dražu kod Baranje, gdje će, naravno, biti dostupna i sama ploča.
+                </p>
+            </div>
+        </div>
+
+        
+        <div id="koncerti" class="tab-content">
+            <h2 class="sekcija-naslov" id="lang-naslov-giga">Protekli i koncerti u najavi</h2>
+
+            <table>
+                <thead>
+                    <tr><th>Datum</th><th>Mjesto / Klub</th><th>Grad</th></tr>
+                </thead>
+                <tbody id="tablica-koncerata-javno"></tbody>
+            </table>
+        </div>
+        
+        
+        <div id="mediji" class="tab-content">
+            <h2 class="sekcija-podnaslov">Audio & Video Playeri</h2>
+            <div class="media-container">
+                <!-- HTML5 video player podešen za Vite server -->
+                <video controls width="100%" style="max-width: 600px; background: #000; border-radius: 4px; display: block; margin: 0 auto;">
+                    <source src="./src/introAna.mp4" type="video/mp4">
+                    Vaš preglednik ne podržava video element.
+                </video>
+            </div>
+        </div>
+
+        </div>
+
+        
+        <div id="galerija" class="tab-content">
+            <h2 class="sekcija-naslov">Arhiva vizualnog kaosa</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="./src/slika2.jpg" alt="slika2"></div>
+                <div class="gallery-item"><img src="./src/nemo.jpg" alt="nemo"></div>
+                <div class="gallery-item"><img src="./src/slika9.jpg" alt="slika9"></div>
+                <div class="gallery-item"><img src="./src/psiho.jpg" alt="psiho"></div>
+                <div class="gallery-item"><img src="./src/slika12.jpg" alt="slika12"></div>
+                <div class="gallery-item"><img src="./src/slika1.jpg" alt="slika1"></div>
+            </div>
+        </div>
+
+        
+        <div id="kontakt" class="tab-content">
+            <h2 class="sekcija-naslov">Booking & Info</h2>
+            <form action="#" method="POST" onsubmit="alert('Poruka poslana!'); return false;">
+                <label for="ime">Ime / Organizacija:</label>
+                <input type="text" id="ime" required>
+                <label for="email">E-mail adresa:</label>
+                <input type="email" id="email" required>
+                <label for="poruka">Poruka:</label>
+                <textarea id="poruka" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Pošalji poruku</button>
+            </form>
+        </div>
+
+        
+        <div id="admin" class="tab-content">
+            <h2 class="sekcija-naslov" style="color: #ffcc00;">GIGS....želje & pozdravi....</h2>
+            <form id="crud-forma" style="border: 2px solid #ffcc00;">
+                <input type="hidden" id="koncert-id">
+                <label>Datum giga:</label><input type="date" id="crud-datum" required>
+                <label>Klub / Mjesto:</label><input type="text" id="crud-klub" placeholder="npr. Klub Exit" required>
+                <label>Grad:</label><input type="text" id="crud-grad" placeholder="npr. Osijek" required>
+                <button type="submit" id="crud-gumb-potvrdi" class="submit-btn" style="background: #ffcc00;">Dodaj Koncert</button>
+            </form>
+            <h3 style="color: #fff; margin-top: 30px;">Trenutno stanje u bazi podataka:</h3>
+            <table>
+                <thead>
+                    <tr><th>Datum</th><th>Klub</th><th>Grad</th><th>Akcije</th></tr>
+                </thead>
+                <tbody id="tablica-koncerata-admin"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="./src/script.js"></script>
+</body>
+</html>
